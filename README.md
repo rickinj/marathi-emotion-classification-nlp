@@ -99,3 +99,29 @@ marathi-emotion-classification-nlp/
 ```bash
 git clone https://github.com/your-username/marathi-emotion-classification-nlp.git
 cd marathi-emotion-classification-nlp
+```
+
+### 2. Create virtual environment
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run notebook
+```bash
+cd notebook
+jupyter notebook
+```
+
+---
+
+📈 Results
+Achieved reliable performance using classical ML models
+Demonstrated effectiveness of preprocessing in improving model accuracy
+
+---
