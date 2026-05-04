@@ -1,4 +1,4 @@
-# Marathi Sentiment Analysis 🇮🇳
+# Marathi Emotion Classification 🇮🇳
 
 ## 📌 Problem Statement
 This project performs emotion classification on Marathi text. The dataset contains English text and its Marathi translation, labeled with emotions such as joy, anger, sadness, fear, etc.
@@ -7,33 +7,70 @@ This project performs emotion classification on Marathi text. The dataset contai
 
 ## ⚙️ Pipeline
 
-English Text → Cleaning → Translation (Google Sheets) → Marathi Cleaning → Vectorization → Classification
+English Text  
+→ Cleaning  
+→ Translation (Google Sheets)  
+→ Marathi Cleaning  
+→ Vectorization  
+→ Classification  
+
+---
+
+## 📁 Project Structure
+
+```
+
+marathi-emotion-classification-nlp/
+│
+├── data/
+│ ├── emotions_marathi_text.csv # Raw dataset
+│ ├── processed_dataset.csv # Cleaned dataset
+│
+├── notebook/
+│ ├── final_model.ipynb # Main training notebook
+│
+├── src/
+│ ├── preprocessing.py # Text cleaning pipeline
+│ ├── model.py # Model building & evaluation
+│
+├── requirements.txt
+├── README.md
+
+```
+
 
 ---
 
 ## 🧠 Techniques Used
 
-- Text Cleaning (neattext, regex)
-- Marathi NLP preprocessing (mahaNLP)
-- Feature Extraction:
-  - CountVectorizer
-  - TF-IDF (optional)
-- Model:
-  - Logistic Regression
+### 🔹 Text Preprocessing
+- neattext (noise removal)
+- Regex (mentions, hashtags, URLs)
+- mahaNLP (Marathi normalization & stopwords)
+
+### 🔹 Feature Extraction
+- CountVectorizer
+- TF-IDF (optional)
+
+### 🔹 Model
+- Logistic Regression
 
 ---
 
 ## 📊 Evaluation
 
-- Accuracy Score
-- Classification Report (Precision, Recall, F1-score)
+- Accuracy Score  
+- Classification Report:
+  - Precision
+  - Recall
+  - F1-score  
 
 ---
 
 ## ⚠️ Challenges Faced
 
-- Handling noisy text (mentions, hashtags, emojis)
-- Marathi text normalization
+- Handling noisy social media text (mentions, emojis, hashtags)
+- Marathi text normalization and preprocessing
 - Encoding issues (UTF-8 handling in CSV files)
 
 ---
@@ -42,15 +79,23 @@ English Text → Cleaning → Translation (Google Sheets) → Marathi Cleaning �
 
 - Regional language NLP (Marathi)
 - Custom preprocessing pipeline
-- End-to-end ML workflow from raw data to prediction
+- Multilingual workflow (English → Marathi)
+- End-to-end ML pipeline
 
 ---
 
 ## 🚀 Future Improvements
 
-- Use transformer-based models (IndicBERT, mBERT)
-- Improve translation quality
-- Deploy as REST API (FastAPI)
-- Add real-time prediction UI
+- Transformer-based models (IndicBERT, mBERT)
+- Better translation pipeline
+- FastAPI deployment
+- Real-time prediction UI
 
 ---
+
+## 🧪 How to Run
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/marathi-emotion-classification-nlp.git
+cd marathi-emotion-classification-nlp
